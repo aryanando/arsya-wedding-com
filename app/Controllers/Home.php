@@ -6,6 +6,14 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('welcome_message');
+		$data = array(
+			'makanan'  => array(
+				'Soto' => 'sotoku'
+			), 
+			"BMW", 
+			"Toyota"
+		);
+		return json_encode($data);
+		// return view('welcome_message');
 	}
 }
